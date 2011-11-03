@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/lcg
+# catalog-date 2008-09-10 22:47:41 +0200
+# catalog-license lppl
+# catalog-version 1.2
 Name:		texlive-lcg
 Version:	1.2
 Release:	1
@@ -43,6 +49,7 @@ set values for the range, a seed, and the name of the counter.
 #- source
 %doc %{_texmfdistdir}/source/latex/lcg/lcg.dtx
 %doc %{_texmfdistdir}/source/latex/lcg/lcg.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -53,3 +60,5 @@ set values for the range, a seed, and the name of the counter.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
