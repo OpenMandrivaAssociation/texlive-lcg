@@ -6,7 +6,7 @@
 # catalog-version 1.2
 Name:		texlive-lcg
 Version:	1.2
-Release:	1
+Release:	2
 Summary:	Generate random integers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lcg
