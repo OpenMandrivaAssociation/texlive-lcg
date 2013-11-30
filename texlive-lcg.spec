@@ -1,12 +1,12 @@
-# revision 15878
+# revision 31474
 # category Package
 # catalog-ctan /macros/latex/contrib/lcg
-# catalog-date 2008-09-10 22:47:41 +0200
+# catalog-date 2013-08-19 14:43:09 +0200
 # catalog-license lppl
-# catalog-version 1.2
+# catalog-version 1.3
 Name:		texlive-lcg
-Version:	1.2
-Release:	2
+Version:	1.3
+Release:	1
 Summary:	Generate random integers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lcg
@@ -22,8 +22,9 @@ Requires(post):	texlive-kpathsea
 %description
 The lcg package generates random numbers (integers) via a
 linear congruential generator (Schrage's method). The random
-numbers are written to a counter. The keyval package is used to
-set values for the range, a seed, and the name of the counter.
+numbers are written to a counter. The keyval package is used
+for the user to provide values for the range and a seed, and
+for the name of the counter to be used.
 
 %post
     %{_sbindir}/texlive.post
@@ -50,17 +51,3 @@ set values for the range, a seed, and the name of the counter.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
-+ Revision: 753211
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
-+ Revision: 718838
-- texlive-lcg
-- texlive-lcg
-- texlive-lcg
-- texlive-lcg
-
