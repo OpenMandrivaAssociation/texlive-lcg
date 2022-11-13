@@ -1,19 +1,13 @@
-# revision 31474
-# category Package
-# catalog-ctan /macros/latex/contrib/lcg
-# catalog-date 2013-08-19 14:43:09 +0200
-# catalog-license lppl
-# catalog-version 1.3
 Name:		texlive-lcg
-Version:	1.3
-Release:	10
+Version:	31474
+Release:	1
 Summary:	Generate random integers
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lcg
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lcg.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lcg.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lcg.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lcg.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lcg.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lcg.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ for the user to provide values for the range and a seed, and
 for the name of the counter to be used.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,7 +38,8 @@ for the name of the counter to be used.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
