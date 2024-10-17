@@ -3,7 +3,7 @@ Version:	31474
 Release:	2
 Summary:	Generate random integers
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lcg
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/lcg
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lcg.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lcg.doc.r%{version}.tar.xz
